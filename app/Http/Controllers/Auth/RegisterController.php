@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
+// 
 class RegisterController extends Controller
 {
     /*
@@ -46,13 +46,24 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function register(Request $request)
     {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+        $validateData = $request ->validate([
+          'name' => 'required|sring|max:255',
+          'email'=>  'required|string|email|max:255|unique:users',
+          'password' => 'required|string|min:6|confirmed',
         ]);
+        try {
+          $validateData['password']= bcrypt(array_get($validateData, 'password'));
+          $valiadteData['activation_code']=str_random(30).time();
+          $user                           =app(User::class)->create($validateData);
+        }
+        catch(\Exception $exception){
+          logger()->error ($exception);
+          return redirect ()->back()->with('messsage','Unable to create new user');
+        }
+        $user ->notify(new UserRegisteredSuccessfully($user));
+        return redirect ()->back()->with('message','Succefully created a new account.Please check your email to activate your account and get the link');
     }
 
     /**
@@ -61,12 +72,23 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function activateUser(string $activationCode)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        try{
+          $user=app(User::class)->where ('activation_code', $activationCode)->first();
+          if (!$user){
+            return "The code does not exsist for any user in our system.";
+          }
+
+          $user->status    =1;
+          $user->activation_code =null;
+          $user->save();
+          $auth()->login($user);
+        }
+        catch(\Exception $exception){
+          logger()->error($exception);
+          return "Whoops something went wrong";
+        }
+        return redirect()->to ('/home');
     }
 }
