@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
+
     /**
      * The application's global HTTP middleware stack.
      *
@@ -37,10 +38,12 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
+
         'api' => [
             'throttle:60,1',
             'bindings',
         ],
+
     ];
 
     /**
@@ -59,5 +62,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'is_admin' => \App\Http\Middleware\IsAdmin::class,
     ];
 }

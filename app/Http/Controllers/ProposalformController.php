@@ -13,9 +13,10 @@ class ProposalformController extends Controller
      */
     public function index()
     {
-        //
-    }
-
+        //code for retrival of data stored in the db
+        $proposalform=proposalform::all();
+        return view('index')->withproposalform($proposalform);
+}
     /**
      * Show the form for creating a new resource.
      *
@@ -35,7 +36,7 @@ class ProposalformController extends Controller
      */
     public function store(Request $request)
     {
-    
+
 
       $proposalforms = new proposalform;
       $proposalforms->name = $request->input('name');
@@ -45,7 +46,7 @@ class ProposalformController extends Controller
       $proposalforms->Proposal = $request->input('Proposal');
       $proposalforms->number = $request->input('number');
       $proposalforms->save();
-      return redirect('passports')->with('success', 'Information has been added');
+      return redirect('/home')->with('success', 'Information has been added');
     }
 
     /**
