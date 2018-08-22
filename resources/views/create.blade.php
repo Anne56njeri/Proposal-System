@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <h2>Proposal Management System</h2><br/>
-      <form method="post" action="{{url('passports')}}" enctype="multipart/form-data">
+      <form method="post" action="{{ action ('ProposalformController@store') }}" enctype="multipart/form-data">
         @csrf
         <div class="row">
           <div class="col-md-4"></div>
@@ -22,13 +22,7 @@
             <input type="text" class="form-control" name="name">
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="Email">Email:</label>
-              <input type="text" class="form-control" name="email">
-            </div>
-          </div>
+
         <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
@@ -40,7 +34,7 @@
             <div class="col-md-4"></div>
               <div class="form-group col-md-4">
                 <label for="Number">Proposal:</label>
-                <input type="text-area" class="form-control" name="number">
+                <input type="text" class="form-control" name="Proposal">
               </div>
             </div>
         <div class="row">

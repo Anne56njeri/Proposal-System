@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\proposalform;
 use Illuminate\Http\Request;
 
 class ProposalformController extends Controller
@@ -35,7 +35,17 @@ class ProposalformController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
+
+      $proposalforms = new proposalform;
+      $proposalforms->name = $request->input('name');
+      $date=date_create($request->input('date'));
+      $format=date_format($date,"Y-m-d");
+      $proposalforms->date = strtotime($format);
+      $proposalforms->Proposal = $request->input('Proposal');
+      $proposalforms->number = $request->input('number');
+      $proposalforms->save();
+      return redirect('passports')->with('success', 'Information has been added');
     }
 
     /**

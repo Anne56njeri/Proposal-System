@@ -18,7 +18,7 @@ class CreateProposalformsTable extends Migration
             $table->string('name');
             $table->integer('date');
             $table->integer('number');
-            $table->text('Proposal');
+            $table->string('Proposal');
             $table->timestamps();
 
         });
