@@ -68,7 +68,9 @@ class ProposalformController extends Controller
      */
     public function edit($id)
     {
-        //
+        //editing view
+        $proposalform=proposalform::find($id);
+        return view ('edit',compact('proposalform','id'));
     }
 
     /**
@@ -92,5 +94,9 @@ class ProposalformController extends Controller
     public function destroy($id)
     {
         //
+
+                $proposalform=proposalform::find($id);
+                $proposalform->delete();
+                return redirect ('proposal')->with('success','Information has been deleted')
     }
 }

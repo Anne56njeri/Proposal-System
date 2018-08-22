@@ -104,7 +104,7 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <strong>Date : </strong>
-            <input class="date form-control"  type="text" id="datepicker" name="date">
+            <input class="date form-control"  type="date" id="datepicker" name="date">
          </div>
         </div>
          <div class="row">
