@@ -20,4 +20,11 @@
         </div>
     </div>
 </div>
+<br>
+<br>
+<div class="container">
+<div class="jumbotron">
+  <center><h2>Proposal Management System</h2></center>
+</div>
+</div>
 @endsection
