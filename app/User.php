@@ -27,7 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    
+    // we include a method to check if user is an admin
+    // declare  constant variables 
 const ADMIN_TYPE = 'admin';
 const DEFAULT_TYPE = 'default';
 public function isAdmin()    {
