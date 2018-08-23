@@ -17,6 +17,13 @@ class ProposalformController extends Controller
         $proposalform=proposalform::all();
         return view('index')->withproposalform($proposalform);
 }
+public function index_album($proposalformID = null)
+{
+    //code for retrival of data stored in the db
+    $proposalform=proposalform::all();
+    return view('media/index')->withproposalform($proposalform);
+}
+
     /**
      * Show the form for creating a new resource.
      *
@@ -57,10 +64,11 @@ class ProposalformController extends Controller
      */
     public function show($id)
     {
-        //to display information with taking an id 
+        //to display information with taking an id
         $proposalform=proposalform::find($id);
         return view('show',compact('proposalform','id'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

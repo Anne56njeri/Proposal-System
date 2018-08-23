@@ -15,6 +15,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/stage',function(){
+  $proposalform=DB::table('proposalforms')->get();
+  return view('stage')->withproposalform($proposalform);
+});
 Route::resource('proposal','ProposalformController');
 Auth::routes();
 Route::get('admin', 'AdminController@admin')

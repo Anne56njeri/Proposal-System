@@ -63,7 +63,7 @@
 
                   </div>
                   <div class=" " style="float:right;">
-                <a class="btn btn-primary" href=""> Move to stage one</a>
+                <a class="btn btn-primary" href="{{url ('/stage') }}"> Move to stage one</a>
             </div>
                 </div>
 
