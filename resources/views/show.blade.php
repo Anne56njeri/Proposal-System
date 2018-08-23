@@ -37,9 +37,7 @@
         </div>
     </div>
 
-    <div class="jumbotron">
-      <center><h2>Proposal Available</h2></center>
-    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -60,8 +58,16 @@
                       <strong>Date:</strong>
                       {{ $proposalform->date }}
                   </div>
+                  <div class="" style="float:left;">
+                <a class="btn btn-primary" href="{{ url('/proposal') }}"> Back</a>
+
                   </div>
+                  <div class=" " style="float:right;">
+                <a class="btn btn-primary" href=""> Move to stage one</a>
+            </div>
                 </div>
+
+
             </div>
         </div>
     </div>
