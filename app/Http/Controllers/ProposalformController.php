@@ -57,7 +57,9 @@ class ProposalformController extends Controller
      */
     public function show($id)
     {
-        //
+        //to display information with taking an id 
+        $proposalform=proposalform::find($id);
+        return view('show',compact('proposalform','id'));
     }
 
     /**
@@ -83,6 +85,16 @@ class ProposalformController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $proposalform=proposalform::find($id);
+        $proposalform->name = $request->get('name');
+        $date=date_create($request->get('date'));
+        $format=date_format($date,"Y-m-d");
+        $proposalform->date = strtotime($format);
+        $proposalform->Proposal = $request->get('Proposal');
+        $proposalform->number = $request->get('number');
+        $proposalform->save();
+        return redirect('proposal');
+
     }
 
     /**
@@ -97,6 +109,6 @@ class ProposalformController extends Controller
 
                 $proposalform=proposalform::find($id);
                 $proposalform->delete();
-                return redirect ('proposal')->with('success','Information has been deleted')
+                return redirect ('proposal')->with('success','Information has been deleted');
     }
 }

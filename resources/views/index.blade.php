@@ -52,7 +52,9 @@
         <td>{{$proposal->number}}</td>
         <td>{{$proposal->Proposal}}</td>
 
-        <td><a href="{{action('ProposalformController@edit', $proposal['id'])}}" class="btn btn-warning">Edit</a></td>
+        <td>
+        <a href="{{action('ProposalformController@show', $proposal['id'])}}" class="btn btn-warning">show</a>
+        </td>
         <td>
             <form action="{{action('ProposalformController@destroy', $proposal['id'])}}" method="post">
               @csrf
