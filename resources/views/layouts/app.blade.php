@@ -64,11 +64,18 @@
      background-color: grey;
  	color: #fff;
    }
-   p.one {
-     border-bottom: 6px solid steelblue ;
+   .one {
+     border-bottom: 4px solid steelblue ;
      padding:4px;
-     border-left: :  7px;
+
    }
+   .image{
+    border: 1px solid #ddd;
+    border-radius: 2spx;
+    padding: 12px;
+     box-shadow: 5px 5px grey;
+    width: ;
+  }
    </style>
 </head>
 <body>
