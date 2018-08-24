@@ -19,15 +19,66 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+   <style>
+   .button {
+     border-radius: 2px;
+     background-color:transparent;
+     border: 2px solid yellow;
+     color: white;
+     text-align: center;
+     font-size: 20px;
+     padding: px;
+     width: 350px;
+     transition: all 0.5s;
+     cursor: pointer;
+     margin: 5px;
+
+   }
+
+   .button span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+   }
+
+   .button span:after {
+     content: '\00bb';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -20px;
+     transition: 0.5s;
+   }
+
+   .button:hover span {
+     padding-right: 25px;
+   }
+
+   .button:hover span:after {
+     opacity: 1;
+     right: 0;
+     .
+   }
+   .active{
+     background-color: grey;
+ 	color: #fff;
+   }
+   p.one {
+     border-bottom: 6px solid steelblue ;
+     padding:4px;
+     border-left: :  7px;
+   }
+   </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color:">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Proposal Management System
+                <a class="navbar-brand" href="{{ url('/') }}" style=" ">
+                  Home
                 </a>
-                <a href="{{ url('/proposal/create') }}" class="active">Add Proposal</a>
+                <a href="{{ url('/proposal/create') }}" class="nav-link active " style="font-size:15px; color:;">Add Proposal<span class="sr-only">(current)</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

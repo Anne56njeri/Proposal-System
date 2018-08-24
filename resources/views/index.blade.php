@@ -14,10 +14,9 @@
 </div>
 <br>
 <br>
-<div class="container">
-<div class="jumbotron">
-  <center><h2>Proposal Management System</h2></center>
-</div>
+<div class="jumbotron" style="background-image:url(/images/front.jpg);height:400px;background-repeat: no-repeat;background-position:center ;  background-size: cover;">
+  <center><h2  style="color:white;">Proposal Management System</h2></center>
+<center><button class="button" style=""><span>Admin Dashboard</span></button><center>
 </div>
 <div class="container">
   @if (\Session::has('success'))
