@@ -23,7 +23,7 @@
 <br>
 <br>
 <div class="container">
-<div class="jumbotron">
+<div class="jumbotron" style="background-image:url(../images/front.jpg);">
   <center><h2>Proposal Management System</h2></center>
 </div>
 </div>

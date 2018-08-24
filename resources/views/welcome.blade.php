@@ -14,6 +14,11 @@
         <style>
             html, body {
                 background-color: #fff;
+                background-image:url('/images/front.jpg');
+                background-repeat: no-repeat;
+                background-position:center ;
+                background-size: cover;
+                height: 500px;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -52,7 +57,7 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -62,6 +67,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+
+
+}
         </style>
     </head>
     <body>
@@ -78,17 +87,19 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="content" style="">
+                <div class="title m-b-md" style="color:white;">
+                    One Love
+
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/home') }} " style="color:white;">Home</a>
+                    <a href=" " style="color:white;">Register</a>
+
+                    <a href=" {{ route('register') }}"style="color:white;">About</a>
+                    <a href=" {{ route('login') }}"style="color:white;">Login</a>
+
                 </div>
             </div>
         </div>
