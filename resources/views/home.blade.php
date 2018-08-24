@@ -65,4 +65,22 @@ cites of the word in classical literature, discovered the undoubtable source.</p
     </div>
   </div>
 </div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <img src="/images/back.jpg" class="image" alt="img" style="height:350px; width:;">
+    </div>
+    <div class="col-md-5">
+      <h2 class="on" style="color:yellowgreen;">One Love Solutions</h2>
+
+<p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+It has roots in a piece of classical Latin literature from 45 BC,
+making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the
+cites of the word in classical literature, discovered the undoubtable source.</p>
+    </div>
+  </div>
+</div>
 @endsection

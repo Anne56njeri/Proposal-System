@@ -23,7 +23,7 @@
    .button {
      border-radius: 2px;
      background-color:transparent;
-     border: 2px solid yellow;
+     border: 2px solid yellowgreen;
      color: white;
      text-align: center;
      font-size: 20px;
