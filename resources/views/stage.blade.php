@@ -48,10 +48,10 @@
         <td>{{$proposal->Proposal}}</td>
 
         <td>
-        <a href=" " class="btn btn-warning">Accept</a>
+        <a href="{{ route('proposal.edit',$proposal->id)}} " class="btn btn-warning">Move to stage two</a>
         </td>
         <td>
-            <form action=" " method="post">
+            <form action="{{route ('proposal.destroy',$proposal->id)}} " method="post">
               @csrf
               <input name="_method" type="hidden" value="DELETE">
               <button class="btn btn-danger" type="submit">Reject</button>
