@@ -89,6 +89,9 @@ class StageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //we  query the db for the specific id
+        $stage=stage::find($id);
+        $stage->delete();
+        return redirect ('/stagetwo')->with('success','Information has been deleted');
     }
 }
