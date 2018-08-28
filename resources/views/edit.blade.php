@@ -13,7 +13,7 @@
           @endif
 
           <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="{{ action ('ProposalformController@update',$id) }}">
+            <form class="form-horizontal" method="POST" action="{{route ('stage.store') }}">
               {{ csrf_field() }}
 
               <div class="form-group">
@@ -62,8 +62,8 @@
 
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
-                  <button type="submit" class="btn btn-primary">
-                    Edit
+                  <button type="submit" class="btn btn-success">
+                    Confirm
                   </button>
                 </div>
               </div>

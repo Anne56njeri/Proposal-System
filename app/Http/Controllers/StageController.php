@@ -14,7 +14,7 @@ class StageController extends Controller
     public function index()
     {
         //
-      
+
     }
 
     /**
@@ -36,7 +36,15 @@ class StageController extends Controller
     public function store(Request $request)
     {
         //
-
+        $stage = new stage;
+        $stage->name = $request->input('name');
+        $date=date_create($request->input('date'));
+        $format=date_format($date,"Y-m-d");
+        $stage->date = strtotime($format);
+        $stage->Proposal = $request->input('Proposal');
+        $stage->number = $request->input('number');
+        $stage->save();
+        return redirect('/stagetwo')->with('success', 'Information has been moved to the second stage');
     }
 
     /**
