@@ -5,10 +5,10 @@ An app bulid using Laravel5.6  a Php framework
 ![Screenshot](screen.png)
 
 - Admin panel
-![Screenshot](screen1.png)
+![Screenshot](screen2.png)
 
 - All accepted proposal
-![Screenshot](screen2.png)
+![Screenshot](screen1.png)
 ## Author name
 Maryanne  Njeri
 
