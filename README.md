@@ -4,8 +4,11 @@ An app bulid using Laravel5.6  a Php framework
 - Home page
 ![Screenshot](screen.png)
 
+- Admin panel
+![Screenshot](screen1.png)
 
-
+- All accepted proposal
+![Screenshot](screen2.png)
 ## Author name
 Maryanne  Njeri
 
@@ -22,8 +25,13 @@ Maryanne  Njeri
 
 
 ## Project setup instructions:
+
+
 - cd into /var/www/html  
-- create a new Project using the composer
+- cd into empty folder
+- git clone
+- connect to database
+
 
 
 ## Technology used:
