@@ -1,5 +1,5 @@
 ## Proposal Management System
-An app bulid using Laravel5.6  a Php framework  
+An app built using Laravel5.6  a Php framework  
 
 - Home page
 ![Screenshot](screen.png)
